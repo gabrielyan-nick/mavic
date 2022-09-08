@@ -1,3 +1,42 @@
+@font-face {
+  font-family: "SFProDisplay-Regular", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/SFProDisplay-Regular.woff2") format("woff2"), url("../fonts/SFProDisplay-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "SFProDisplay-Semibold", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/SFProDisplay-Semibold.woff2") format("woff2"), url("../fonts/SFProDisplay-Semibold.woff") format("woff");
+}
+.title {
+  font-family: "SFProDisplay-Regular", sans-serif;
+  font-weight: 400;
+}
+
+.top__title {
+  font-family: "SFProDisplay-Semibold", sans-serif;
+  font-weight: 600;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+}
+
+.header__inner, .header__btn {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+}
+
+.header__tel {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+}
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -7,14 +46,6 @@ html {
 *::after,
 *::before {
   box-sizing: inherit;
-}
-
-@font-face {
-  font-family: "SFProDisplay-Regular";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/SFProDisplay-Regular.woff") format("woff"),
-    url("../fonts/SFProDisplay-Regular.woff2") format("woff2");
 }
 
 a {
@@ -44,6 +75,8 @@ body {
   overflow-x: hidden;
   position: relative;
   color: #fff;
+  font-size: 17px;
+  line-height: 150%;
 }
 
 .page-section {
@@ -57,25 +90,111 @@ body {
 }
 
 .container {
-    max-width: 1270px;
-    padding: 0 15px ;
-    margin: 0 auto;
+  max-width: 1270px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 .title {
-  font-family: "SFProDisplay-Regular";
-  font-weight: 400;
   font-size: 44px;
   line-height: 53px;
-  margin-left: 25px;
+  padding-left: 25px;
+  margin-bottom: 55px;
 }
 
 .scroll-btn {
-    text-align: center;
-    padding: 13px 0 30px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    
+  text-align: center;
+  padding: 13px 0 30px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 30px;
+  z-index: 10;
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 30px;
+  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 17px;
+}
+.header__btn {
+  font-size: 15px;
+  line-height: 17px;
+  padding: 7px 28px;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 3px;
+  color: white;
+  margin-right: 8px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.header__btn:hover {
+  background-color: #fff;
+  color: #1c1c1c;
+}
+.header__tel {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.menu__list {
+  display: flex;
+  justify-content: space-between;
+  max-width: 570px;
+  gap: 20px;
+}
+
+.top {
+  background-image: url("/images/top-bg.jpg");
+  background-position: top center;
+  background-size: cover;
+}
+.top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: radial-gradient(45.97% 54.43% at 50% 45.57%, rgba(23, 26, 28, 0) 50.28%, rgba(23, 26, 28, 0.00225974) 50.29%, rgba(4, 5, 5, 0.820343) 58.72%, rgba(5, 5, 6, 0.792703) 80.08%, #000000 87.89%);
+  opacity: 0.4;
+}
+.top__inner {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-top: 23%;
+}
+.top__title {
+  font-size: 96px;
+  line-height: 115px;
+  margin-bottom: 25px;
+}
+.top__text {
+  margin: 25px 0 35px;
+  max-width: 325px;
+}
+.top__social {
+  display: flex;
+  gap: 50px;
+}
+.top__social-link {
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+.top__social-link:hover {
+  opacity: 1;
 }
