@@ -80,7 +80,7 @@
     flex-direction: column;
     text-align: center;
     align-items: center;
-    margin-top: 23%;
+    margin-top: 17%;
   }
   &__title {
     @extend %sf-semibold;
@@ -101,6 +101,67 @@
     transition: all 0.3s;
     &:hover {
       opacity: 1;
+    }
+  }
+}
+
+.products {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__text {
+    max-width: 440px;
+    margin-left: 55px;
+    p {
+      margin-bottom: 35px;
+    }
+  }
+  &__slider-box {
+    position: relative;
+    padding-top: 230px;
+  }
+  &__slider {
+    max-width: 560px;
+    display: flex;
+    overflow: hidden;
+    // &::before {
+    //   content: "";
+    //   width: 560px;
+    //   height: 300px;
+    //   border: 4px solid white;
+    //   position: absolute;
+    //   bottom: 67px;
+    //   left: 10px;
+  }
+
+  &__slider-text {
+    @extend %ubuntu-normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: right;
+    position: absolute;
+    bottom: 50px;
+    left: -250px;
+    z-index: 5;
+  }
+}
+
+.slider {
+  &__btns {
+    display: flex;
+    justify-content: flex-end;
+    transform: translateY(-7px);
+  }
+  &__btn {
+    width: 60px;
+    height: 48px;
+    background-color: #1c1c1c;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    &:hover {
+      background-color: #fff;
     }
   }
 }
