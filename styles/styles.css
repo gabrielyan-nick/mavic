@@ -111,6 +111,10 @@ body {
   bottom: 0;
 }
 
+.hide {
+  display: none;
+}
+
 .header {
   position: fixed;
   left: 0;
@@ -217,15 +221,14 @@ body {
 .products__slider {
   max-width: 560px;
   display: flex;
-  overflow: hidden;
 }
 .products__slider-text {
   font-size: 24px;
   line-height: 28px;
   text-align: right;
   position: absolute;
-  bottom: 50px;
-  left: -250px;
+  bottom: 200px;
+  left: 760px;
   z-index: 5;
 }
 
@@ -240,8 +243,9 @@ body {
   background-color: #1c1c1c;
   border: none;
   display: inline-block;
+  transition: all .7s;
   cursor: pointer;
 }
 .slider__btn:hover {
-  background-color: #fff;
+  background-color: #616060;
 }

@@ -124,7 +124,7 @@
   &__slider {
     max-width: 560px;
     display: flex;
-    overflow: hidden;
+    // overflow: hidden;
     // &::before {
     //   content: "";
     //   width: 560px;
@@ -141,8 +141,8 @@
     line-height: 28px;
     text-align: right;
     position: absolute;
-    bottom: 50px;
-    left: -250px;
+    bottom: 200px;
+    left: 760px;
     z-index: 5;
   }
 }
@@ -159,9 +159,10 @@
     background-color: #1c1c1c;
     border: none;
     display: inline-block;
+    transition: all .7s;
     cursor: pointer;
     &:hover {
-      background-color: #fff;
+      background-color: rgb(97, 96, 96);
     }
   }
 }
